@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        /* 块级标签 */
+        div{
+            background-color: red;
+            width: 150px;
+            height: 50px;
+            /* 隐藏标签 */
+            /*display: none;*/
+            /* 让标签变为行内标签 上面的宽高无效了 */
+            /*display: inline;*/
+            /* 让标签变为行内块级标签(内联-块级标签) */
+            display: inline-block;
+        }
+        p{
+            background-color: yellow;
+            width: 150px;
+            height: 30px;
+        }
+
+        /* 行内标签 */
+        span{
+            background-color: green;
+            /* 让行内标签变为块级标签 只有块级标签下面的宽度设置才有效 */
+            display: block;
+            width: 200px;
+            height: 30px;
+        }
+
+        /* 行内块级标签(内联-块级标签) */
+        input{
+            width: 100px;
+            height: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+    块级标签  div p h1 h2 ul li
+    独占一行
+    能够设置宽度和高度
+    -->
+    <div>divdivdivdivdiv</div>
+    <div>divdivdivdivdiv</div>
+    <div>divdivdivdivdiv</div>
+    <p>pppppppppppp</p>
+
+
+    <!--
+    行内标签(内联标签)
+    多个行内标签能同时在同一行
+    宽度和高度取决于内容的尺寸(比如span、a、label)
+    -->
+    <span>spanspanspanspan</span>
+    <span>spanspanspanspan</span>
+    <span>spanspanspanspan</span>
+
+    <a href="#">百度一下</a>
+    <a href="#">百度一下</a>
+    <a href="#">百度一下</a>
+
+    <br>
+
+    <!--
+    行内块级标签(内联-块级标签)
+    多个行内-块级标签可以显示在同一行
+    能随时设置宽高(比如input、button)
+    -->
+    <input>
+    <input>
+    <input>
+
+
+    <!--
+    修改标签的显示类型
+    css中有一个display属性 能修改标签的显示类型
+    none: 隐藏标签
+    block: 让标签变为块级标签
+    inline: 让标签变为行内标签
+    inline-block: 让标签变为行内块级标签(内联-块级标签)
+    -->
+
+</body>
+</html>

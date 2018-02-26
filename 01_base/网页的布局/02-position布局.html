@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .one{
+            background-color: red;
+            width: 400px;
+            height: 400px;
+            margin: 50px;
+            /*
+            如果不设置position: relative;
+            .two就会是相对于body的位置定位的
+            因为position默认是static
+            如果.two的父标签是static就会去找父标签的父标签
+            直到找到最后(body)
+
+            所以相对于谁定位
+            就要设置谁的position为relative */
+            position: relative;
+        }
+        .two{
+            background-color: yellow;
+            width: 100px;
+            height: 90px;
+            /* 绝对定位 */
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div class="two">1111111111</div>
+    </div>
+</body>
+</html>

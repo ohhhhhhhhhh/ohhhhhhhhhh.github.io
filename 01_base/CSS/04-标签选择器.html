@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--选择器 根据选择器设置样式-->
+    <style>
+        /* 标签选择器 根据标签名设置样式 */
+        div{
+            color: red;
+        }
+        p{
+            color: blue;
+        }
+
+        /* 类选择器 */
+        .one{
+            color: green;
+        }
+
+        /* id选择器 唯一的 独一无二的 */
+        #main{
+            font-size: 40px;
+        }
+
+        /* 并列选择器 或 */
+        div,.one{
+            background-color: bisque;
+        }
+
+        /* 复合选择器 与*/
+        div.one{
+            background-color: silver;
+        }
+
+        /* 后代选择器 */
+        div p{
+            color: chocolate;
+        }
+
+        /* 直接后代选择器 */
+        div > p{
+            background-color: green;
+        }
+
+        /* 相邻兄弟选择器 */
+        div + p{
+            background-color: red;
+        }
+
+        /* 属性选择器 */
+        /* 一维 */
+        div[name]{
+            font-size: 30px;
+        }
+        /* 二维 */
+        div[name][age]{
+            background-color: yellow;
+        }
+
+        div[name="first"]{
+            background-color: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">我就是div</div>
+    <div>我就是div</div>
+    <div>我就是div</div>
+    <p>我就是p</p>
+
+    <div class="one">我是div二代</div>
+    <p class="one">我是p二代</p>
+
+    <div>
+        <p>div里面的p</p>
+        <span>
+            <p>div里面的span里面的p</p>
+        </span>
+    </div>
+    <p>与div相邻的p</p>
+    <p>与p相邻的p</p>
+
+    <div name="first">属性选择器div 我是有名字的</div>
+    <div name="second">属性选择器div 巧了 我也有</div>
+    <div>属性选择器div 难道就我没有吗</div>
+
+    <div name="first">属性选择器div 我只有name</div>
+    <div name="second" age="15">属性选择器div 嘿 我都有</div>
+    <div age="10">属性选择器div 我只有age</div>
+
+</body>
+</html>

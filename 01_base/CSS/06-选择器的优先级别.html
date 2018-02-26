@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+    css选择器遵循:
+    1. 在相同级别选择器 : 1) 叠加原则 2) 就近原则
+    2. id选择器 > 类选择器 > 标签选择器
+    3. 范围越小优先级别越高
+
+    优先级排序:
+    important > 内联 > id > 类|伪类|属性选择 > 标签|伪元素 > 通配符 > 继承
+    -->
+    <style>
+
+        /* 复合选择器 */
+        div#main{
+            color: gold;
+        }
+
+        /* id选择器 */
+        #main{
+            color: deeppink;
+        }
+
+        /* 类选择器 */
+        .test2{
+            color: purple;
+        }
+        .test1{
+            color: yellow;
+        }
+
+        /* 标签选择器 */
+        div{
+            color: red;
+        }
+        div{
+            color: green;
+        }
+        div{
+            color: blue;
+        }
+
+        /*
+        通配选择符   权值:0
+        标签选择器   权值:1
+        伪元素      权值:1
+        类选择器     权值:10
+        属性选择器   权值:10
+        伪类        权值:10
+        id选择器    权值:100
+        复合选择器   权值:101
+        !important  权值:1000
+
+        选择器权值加在一起 权值大的优先 权值相同 后定义的优先
+        */
+        *{
+            color: darkolivegreen !important;
+    </style>
+</head>
+<body>
+    <!-- 内联样式 只比important级别低 比其他的都高-->
+    <div class="test1 test2" id="main" style="color: aqua">我是div</div>
+</body>
+</html>

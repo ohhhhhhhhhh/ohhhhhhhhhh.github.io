@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--
+    CSS属性
+    CSS有N多属性 根据继承性 主要可以分为两大类
+    1. 可继承属性
+    1) 父标签的属性值会传递给子标签
+    2) 一般是文字控制属性
+
+    2. 不可继承属性
+    1) 父标签的属性值不会传递给子标签
+    2) 一般是区块控制属性(布局类的属性)
+    -->
+
+
+    <!--
+    CSS属性  -  可继承属性
+    1. 所有标签可继承
+    visibility(规定元素是否可见 就算不可见也占据页面上的控件)
+    cursor(光标类型)
+
+    2. 内联标签可继承
+    letter-spacing
+    word-spacing
+    white-space
+    line-height
+    color
+    font
+    font-family
+    font-size
+    font-style
+    font-variant
+    font-weight
+    text-decoration
+    text-transform
+    direction
+
+    3.块级标签可继承
+    text-indent
+    text-align
+
+    4.列表标签可继承
+    list-style
+    list-style-type
+    list-style-position
+    list-style-image
+    -->
+
+
+    <style>
+        /* 根据body的名称找到 设置 */
+        /*body{*/
+            /*font-size: 30px;*/
+            /*color: red;*/
+            /*!* 文字加粗 *!*/
+            /*font-weight: bolder;*/
+        /*}*/
+        /*div{*/
+            /*!*background: red;*!*/
+            /*background: url("../img/1.png");*/
+            /*!* 大小适应 *!*/
+            /*background-size: cover;*/
+            /*!*background-color: aquamarine;*!*/
+            /*width: 300px;*/
+            /*height: 300px;*/
+            /*text-align: center;*/
+            /*line-height: 300px;*/
+            /* 不能继承 */
+            /*display: none;*/
+            /* visibility 宽高保留 只是隐藏内容*/
+            /*visibility: hidden;*/
+            /*
+            光标类型
+            pointer  手指
+            crosshair 十字架
+            */
+            /*cursor: crosshair;*/
+        /*}*/
+        span{
+            background-color: blue;
+            /*line-height: 300px;*/
+            width: 300px;
+            height: 200px;
+        }
+        a{
+            /* 去除下划线 */
+            text-decoration: none;
+        }
+        .one{
+            /* 首行缩进 */
+            text-indent: 3%;
+        }
+        ul{
+            /* 标签前面的那个小圆点 可以变成方块 */
+            list-style: none;
+        }
+
+        #main{
+            background-color: red;
+            width: 90px;
+            height: 100px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <!--<div>我是div</div>-->
+    <!--<span>我是span</span>-->
+    <!--<p>我是p</p>-->
+    <!--<div>-->
+        <!--<span>-->
+            <!--123456789-->
+        <!--</span>-->
+    <!--</div>-->
+    <p>42321312313313</p>
+    <a href="#">百度一下</a>
+    <p class="one">fdkasdhaldhalkdhaslkhdksadhasdaksldasdyoeyebdchuisyebfchusahdahkdhadhda</p>
+
+
+    <ul>
+        <li>11111111</li>
+        <li>22222222</li>
+        <li>33333333</li>
+        <li>44444444</li>
+    </ul>
+
+    <div id="main">sddasdadaddddddd</div>
+</body>
+</html>
